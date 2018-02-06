@@ -1,6 +1,6 @@
 require("luci.sys")
 
-m = Map("smarthust","Usermanage","Better MentoHust")
+m = Map("usermanage","User Manage","Better MentoHust")
 
 s = m:section(TypedSection,"input","Add new user")
 s.addremove = false
@@ -13,7 +13,7 @@ pass.password = true
 
 local apply = luci.http.formvalue("cbi.apply")
 if apply then
-        io.popen("/usr/smarthust/addnew.sh")
+        io.popen("/root/automentohust/addnew.sh")
 end
 
 return m

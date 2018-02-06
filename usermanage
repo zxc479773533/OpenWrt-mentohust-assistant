@@ -1,0 +1,4 @@
+config input 'input'
+option username ' '
+option password ' '
+option macaddr ' '

@@ -1,13 +1,12 @@
 #!/bin/sh 
 
-        macaddr=`uci get smarthust.input.macaddr`
-        username=`uci get smarthust.input.username`
-        password=`uci get smarthust.input.password`
+macaddr=`uci get usermanage.input.macaddr`
+username=`uci get usermanage.input.username`
+password=`uci get usermanage.input.password`
         
-        uci set smarthust.input.macaddr="xx:xx:xx:xx:xx:xx"
-        uci set smarthust.input.password="********"
-        uci set smarthust.input.username="username"
-        uci commit smarthust
+uci set usermanage.input.macaddr="xx:xx:xx:xx:xx:xx"
+uci set usermanage.input.password="********"
+uci set usermanage.input.username="username"
+uci commit usermanage
 
-        echo "${macaddr},${username},${password}" >> /usr/smarthust/data.txt
-
+echo "${macaddr},${username},${password}" >> /root/automentohust/userpasswd.txt

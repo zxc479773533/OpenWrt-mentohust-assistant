@@ -1,6 +1,7 @@
-#!/bin/sh 
-        macaddr=$(uci get smarthust.input.macaddr)
-        sed -i "/^${macaddr}/d" ~/code/auto-mentohust/data.txt
+#!/bin/sh
 
-        uci set smarthust.input.macaddr="xx:xx:xx:xx:xx:xx"
-        uci commit smarthust
+macaddr=$(uci get usermanage.input.macaddr)
+sed -i "/^${macaddr}/d" /root/automentohust/userpasswd.txt
+
+uci set usermanage.input.macaddr="xx:xx:xx:xx:xx:xx"
+uci commit usermanage
