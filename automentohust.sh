@@ -4,5 +4,5 @@ path=""
 START=50
 start()
 {
-  `sh $path` &
+  `$path` &
 }
