@@ -1,6 +1,6 @@
 require("luci.sys")
 
-m = Map("smarthust","Smart HUST","Smarter HUST")
+m = Map("smarthust","Usermanage","Better MentoHust")
 
 s = m:section(TypedSection,"input","Add new user")
 s.addremove = false

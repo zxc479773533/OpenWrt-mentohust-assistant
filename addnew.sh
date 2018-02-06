@@ -14,6 +14,7 @@ add_new()
         echo "  option macaddr ''" >> /etc/config/smarthust
         echo "  option username ''" >> /etc/config/smarthust
         echo "  option password ''" >> /etc/config/smarthust
+
         echo "${macaddr},${username},${password}" >> /usr/smarthust/data.txt
 }
 
