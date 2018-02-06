@@ -13,7 +13,7 @@ pass.password = true
 
 local apply = luci.http.formvalue("cbi.apply")
 if apply then
-        io.popen("/usr/smarthust/addnew.sh restart")
+        io.popen("/usr/smarthust/addnew.sh")
 end
 
 return m

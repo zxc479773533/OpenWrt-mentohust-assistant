@@ -1,3 +1,6 @@
 #!/bin/sh 
-        mac_addr=`uci get smarthust.input.macaddr`
-        sed -i "/^${mac_addr}/d" /usr/smarthust/data.txt
+        macaddr=$(uci get smarthust.input.macaddr)
+        sed -i "/^${macaddr}/d" ~/code/auto-mentohust/data.txt
+
+        uci set smarthust.input.macaddr="xx:xx:xx:xx:xx:xx"
+        uci commit smarthust
