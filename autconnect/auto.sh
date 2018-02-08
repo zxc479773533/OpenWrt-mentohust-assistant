@@ -2,7 +2,7 @@
 
 INITSLEEPTIME=1
 SLEEPTIME=5
-userpasswdfile="userpasswd.txt"
+userpasswdfile="/root/autoconnect/userpasswd.txt"
 macfile="/tmp/dhcp.leases"
 
 sleep $INITSLEEPTIME
@@ -19,9 +19,6 @@ do
       if [ `cat $macfile | grep $mac | wc -l` -ne 0 ] ; then
         user=${userpasswd:18:10}
         passwd=${userpasswd:29}
-        if [ "$user" = "$nowuser" ] ; then
-          continue
-        fi
         uci set mentohust.@mentohust[0].Username="$user"
         uci set mentohust.@mentohust[0].Password="$passwd"
         /root/down/runmentohust &

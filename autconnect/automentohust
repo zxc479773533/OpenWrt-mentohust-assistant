@@ -1,0 +1,14 @@
+#!/bin/sh /etc/rc.common
+
+START=50
+STOP=10
+
+start()
+{
+  /root/autoconnect/auto.sh &
+}
+
+stop()
+{
+  killall -9 auto.sh
+}

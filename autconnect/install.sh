@@ -7,7 +7,7 @@ chmod 755 automentohust
 
 
 cp automentohust /etc/init.d/automentohust
-ln -s /etc/init.d/automentohust /etc/rc.d/S60automentohust
+/etc/init.d/automentohust enable
 
 mkdir ${path}/model/cbi/usermanage
 
@@ -23,5 +23,3 @@ chmod 755 addnew.sh
 chmod 755 delete.sh
 
 rm -rf /tmp/luci-*
-
-/etc/init.d/uhttpd restart
