@@ -9,4 +9,4 @@ uci set usermanage.input.password="********"
 uci set usermanage.input.username="username"
 uci commit usermanage
 
-echo "${macaddr},${username},${password}" >> /root/autoconnect/userpasswd.txt
+echo "${macaddr},${username},${password}" | sed 's/ //g' >> /root/autoconnect/userpasswd.txt
